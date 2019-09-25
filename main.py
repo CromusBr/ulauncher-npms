@@ -23,7 +23,7 @@ class KeywordQueryEventListener(EventListener):
         searchKeyword = event.get_argument()
 
         if not searchKeyword:
-            return
+            return;
 
         url = 'https://api.npms.io/v2/search?q={}&size=5'.format(searchKeyword)
         logger.debug(url)
